@@ -24,7 +24,7 @@ class BaseView(BrowserView):
 
         # The list of errors found when checking the form.
         self.errors = []
-        
+
         # We get the configuration from the portal_sendaspdf
         self.pdf_tool = getToolByName(self.context,
                                       'portal_sendaspdf')
@@ -186,7 +186,7 @@ class BaseView(BrowserView):
                 # Value is put before the option name as we
                 # insert them after in another list using l.insert(2, opt)
                 options.append(str(opt_val))
-                options.append('--%s' % opt_name)  
+                options.append('--%s' % opt_name)
                 break
 
         return options
@@ -215,7 +215,7 @@ class BaseView(BrowserView):
             print_css = self.context.portal_type in \
                         self.pdf_tool.print_css_types
 
-        export_file, err = transform_module.html_to_pdf(source,
+        export_file, err = transform_module.html_to_pdf(source.encode('utf-8'),
                                                         self.tempdir,
                                                         filename,
                                                         url,

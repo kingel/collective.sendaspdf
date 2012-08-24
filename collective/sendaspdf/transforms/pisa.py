@@ -8,12 +8,12 @@ def html_to_pdf(source, export_dir, filename, original_url, use_print_css, extra
     # We import pisa inside the function so it does not raise
     # import exception if pisa is not installed.
     import ho.pisa as pisa
-    
+
     file_path = '%s/%s' % (export_dir, filename)
 
     pdf_file = file(file_path, "wb")
     pdf = pisa.CreatePDF(
-        str(source.encode('ascii', 'replace')),
+        source,
         pdf_file,
         log_warn = 1,
         log_err = 1,
