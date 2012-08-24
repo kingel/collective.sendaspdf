@@ -39,7 +39,7 @@ rendered.
 To install wkhtmltopdf, go to the projects page and download an
 executable version for your OS. Install it so the command
 'wkhtmltopdf' is in the PATH.
-You can also update your buildout to automatically download 
+You can also update your buildout to automatically download
 wkhtmltopdf and have it used by your instance using the following
 recipes::
 
@@ -111,7 +111,7 @@ After version 2.5 (*well, starting at 2.6*), we'll only ensure
 compatibility with Plone 4 (at least in the tests).
 
 
-For developpers
+For developers
 ===============
 
 You can find some extra doc in

@@ -4,7 +4,8 @@ Changelog
 2.7 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Convert unicode output from view to utf-8 encoded string, to support
+  special characters in pdf [kingel]
 
 
 2.6 (2012-06-15)
